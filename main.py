@@ -18,22 +18,13 @@ def cal_query():
   todaysdate = datetime.now()
   start_rfc_date = convert_to_RFC_datetime(todaysdate.year, todaysdate.month, todaysdate.day, 0, 0)
   end_rfc_date = convert_to_RFC_datetime(todaysdate.year, todaysdate.month, todaysdate.day, 23, 59, 59)
-  # newtodaysdate = datetime.utcnow().replace(tzinfo=tz.tzutc()).astimezone(tz.gettz('America/New_York'))
   print('Todays Calendar')
   print(todaysdate)
   while True:
-    event_count = 0
+    cal_query_result = ''
     events = cal_service.events().list(calendarId='primary', pageToken=page_token, timeMin=start_rfc_date, timeMax=end_rfc_date, orderBy='startTime', singleEvents=True).execute()
     for event in events['items']:
-      if event_count == 0:
-#        print(datetime.fromisoformat(event.get('start', {}).get('dateTime')).strftime("%I:%M %p"))
-        cal_query_result = event.get('summary') + '     ' + datetime.fromisoformat(event.get('start', {}).get('dateTime')).strftime("%I:%M %p") + '   ' + datetime.fromisoformat(event.get('end', {}).get('dateTime')).strftime("%I:%M %p") + '\n'
-#        print('event ', event_count, ' ', cal_query_result)
-        event_count += 1
-      else:
         cal_query_result = cal_query_result + event.get('summary') + '     ' + datetime.fromisoformat(event.get('start', {}).get('dateTime')).strftime("%I:%M %p") + '   ' + datetime.fromisoformat(event.get('end', {}).get('dateTime')).strftime("%I:%M %p") + '\n'
-#        print('event ', event_count, ' ', cal_query_result)
-        event_count += 1
     print(cal_query_result)
     page_token = events.get('nextPageToken')
     if not page_token:
