@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ad73846-21c1-4a27-9dbc-b44ef1e30252" name="Changes" comment="Initial Working Copy">
+    <list default="true" id="5ad73846-21c1-4a27-9dbc-b44ef1e30252" name="Changes" comment="Removal of calendar details loop.  No longer required">
+      <change beforePath="$PROJECT_DIR$/CacheFolder/result.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/CacheFolder/result.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +28,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.mediasend">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="cal_display" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -99,7 +100,21 @@
       <option name="project" value="LOCAL" />
       <updated>1647902750110</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Removal of calendar details loop.  No longer required">
+      <created>1647903537218</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1647903537218</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Removal of calendar details loop.  No longer required">
+      <created>1647903571006</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647903571006</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -115,6 +130,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Working Copy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Working Copy" />
+    <MESSAGE value="Removal of calendar details loop.  No longer required" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removal of calendar details loop.  No longer required" />
   </component>
 </project>

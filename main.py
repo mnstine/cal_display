@@ -1,6 +1,7 @@
 from PIL import Image, ImageFont, ImageDraw
 from init_cal_service import Create_Service
 from datetime import datetime
+from mediasend import main as mediasend
 
 
 CLIENT_SECRET_FILE = 'client_secret_calendar_api.json'
@@ -32,7 +33,7 @@ def cal_query():
 
 
 def convert_to_RFC_datetime(year=1900, month=1, day=1, hour=0, minute=0, seconds=0):
-  dt = datetime(year, month, day, hour, minute, seconds).isoformat() + '-00:00'
+  dt = datetime(year, month, day, hour, minute, seconds).isoformat() + '-05:00'
   return dt
 
 
@@ -48,6 +49,7 @@ def main():
     image_editable.text((45, 150), str(current_date), (245, 155, 66), font=date_font)
     image_editable.text((45,300), cal_query(), (245, 155, 66), font=content_font)
     my_image.save("CacheFolder/result.jpg")
+    mediasend('cal_project')
 
 if __name__ == "__main__":
     main()
